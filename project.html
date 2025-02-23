@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #0d0d0d;
+            color: white;
+            text-align: center;
+        }
+        header {
+            background-color: #111;
+            padding: 20px;
+            font-size: 24px;
+        }
+        nav {
+            background-color: #222;
+            padding: 15px;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 50px auto;
+            padding: 40px;
+            text-align: left;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+        }
+        .hero {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 50px;
+        }
+        .hero-text {
+            max-width: 50%;
+            font-size: 24px;
+        }
+        .highlight {
+            color: red;
+        }
+        .profile-img {
+            width: 250px;
+            height: 250px;
+            border-radius: 20px;
+            object-fit: cover;
+        }
+        .btn {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+        .section {
+            padding: 60px 20px;
+            max-width: 1000px;
+            margin: auto;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        footer {
+            background-color: #182c44;
+            color: white;
+            padding: 20px;
+            margin-top: 50px;
+        }
+        #about {
+    text-align: center;
+    max-width: 800px;
+    margin: 150px auto; /* Increased margin for better centering */
+    padding: 80px; /* Increased padding for more space */
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px; /* Slightly increased border radius */
+    font-size: 22px; /* Increased font size */
+    line-height: 1.8; /* Improved line spacing */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <section class="hero">
+            <div class="hero-text">
+                <h2>Hi, I'm <span class="highlight">Aashish</span></h2>
+                <h2>Web Developer</h2>
+               
+            </div>
+            <img src="profile.jpg">
+        </section>
+    </div>
+    <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>Hello! I'm Aashish Sharma Lamichhane, a passionate learner diving into the world of web development.
+             Currently, I'm exploring HTML, CSS, and JavaScript to build creative and functional websites.
+              My goal is to develop projects that enhance user experience and bring ideas to life through code.</p>
+        <p> When I'm not coding, you can find me exploring new technologies, working on personal projects, or refining my skills to become a
+             proficient developer.
+             I'm always open to learning and collaborating on exciting opportunities!</p>
+    </section>
+    
+    <section id="contact" class="section">
+        <h2>Contact</h2>
+        <p>Feel free to reach out to me via email or social media.</p>
+        <a href="https://www.instagram.com/aashishsharma3300" target="_blank" style="color: red; font-weight: bold;">Instagram</a> |
+            <a href="https://www.youtube.com/@aashishsharma2385" target="_blank" style="color: red; font-weight: bold;">YouTube</a>
+        </p>
+    </section>
+    <footer>
+        <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener("scroll", function() {
+            const sections = document.querySelectorAll(".section");
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                if (rect.top < window.innerHeight * 0.75) {
+                    section.classList.add("visible");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
